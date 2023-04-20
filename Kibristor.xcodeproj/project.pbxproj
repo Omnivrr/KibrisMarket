@@ -11,6 +11,10 @@
 		19A78B2B29F1776B003D5C33 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A78B2A29F1776B003D5C33 /* ContentView.swift */; };
 		19A78B2D29F1776E003D5C33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19A78B2C29F1776E003D5C33 /* Assets.xcassets */; };
 		19A78B3029F1776E003D5C33 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19A78B2F29F1776E003D5C33 /* Preview Assets.xcassets */; };
+		19A78B3929F1815E003D5C33 /* shoppingStuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A78B3829F1815E003D5C33 /* shoppingStuff.swift */; };
+		19A78B3B29F18225003D5C33 /* shopItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A78B3A29F18225003D5C33 /* shopItems.swift */; };
+		19A78B3D29F18439003D5C33 /* signinPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A78B3C29F18439003D5C33 /* signinPage.swift */; };
+		19A78B3F29F1844D003D5C33 /* signupPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A78B3E29F1844D003D5C33 /* signupPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		19A78B2A29F1776B003D5C33 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		19A78B2C29F1776E003D5C33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19A78B2F29F1776E003D5C33 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		19A78B3829F1815E003D5C33 /* shoppingStuff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shoppingStuff.swift; sourceTree = "<group>"; };
+		19A78B3A29F18225003D5C33 /* shopItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shopItems.swift; sourceTree = "<group>"; };
+		19A78B3C29F18439003D5C33 /* signinPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signinPage.swift; sourceTree = "<group>"; };
+		19A78B3E29F1844D003D5C33 /* signupPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signupPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +63,10 @@
 				19A78B2A29F1776B003D5C33 /* ContentView.swift */,
 				19A78B2C29F1776E003D5C33 /* Assets.xcassets */,
 				19A78B2E29F1776E003D5C33 /* Preview Content */,
+				19A78B3829F1815E003D5C33 /* shoppingStuff.swift */,
+				19A78B3A29F18225003D5C33 /* shopItems.swift */,
+				19A78B3C29F18439003D5C33 /* signinPage.swift */,
+				19A78B3E29F1844D003D5C33 /* signupPage.swift */,
 			);
 			path = Kibristor;
 			sourceTree = "<group>";
@@ -137,7 +149,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19A78B3F29F1844D003D5C33 /* signupPage.swift in Sources */,
 				19A78B2B29F1776B003D5C33 /* ContentView.swift in Sources */,
+				19A78B3929F1815E003D5C33 /* shoppingStuff.swift in Sources */,
+				19A78B3D29F18439003D5C33 /* signinPage.swift in Sources */,
+				19A78B3B29F18225003D5C33 /* shopItems.swift in Sources */,
 				19A78B2929F1776B003D5C33 /* KibristorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
