@@ -1,4 +1,4 @@
-//
+////
 //  shoppingStuff.swift
 //  Kibristor
 //
@@ -105,8 +105,51 @@ struct Home: View {
                     
                 }
             }
-            
-            Spacer()
+            ScrollView(.vertical, showsIndicators: false) {
+                VStack(spacing: 15) {
+                    Image("off")
+                        .resizable()
+                        .cornerRadius(15)
+                        .overlay(
+                        VStack {
+                            Spacer()
+                            HStack {
+                                Text("25% OFF VEGETABLES!")
+                                    .font(.system (size: 25, weight: .bold, design: .rounded))
+                                    .foregroundColor(.white)
+                                Spacer()
+                                
+                            }.padding()
+                        }
+                    
+                    )
+                    
+                    HStack {
+                        Text("Categories").font(.body)
+                        Spacer()
+                        Button(action: {
+                            
+                        }) {
+                            Text("View All").foregroundColor(.purple)
+                        }
+                    }
+                    
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: 15) {
+                            ForEach(categories, id: \.self) {i in
+                                VStack{
+                                    Image(i)
+                                        .background((Color.purple.opacity(0.20))
+                                        .frame(maxWidth: .infinity)
+                                        .cornerRadius(10))
+                                    Text(i.capitalized)
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+            }
            
             
         }.padding(.horizontal)
@@ -117,3 +160,5 @@ struct Home: View {
 
 
 var tabs = ["Home", "Wishlist", "Cart"]
+
+var categories = ["New Products", "Snacks", "Fruits", "Water","Shisha", "Vegetables", "Fish", "Canned Food", "Drinks", "Baby Products","Smoke", "Health"]
