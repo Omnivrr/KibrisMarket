@@ -26,69 +26,94 @@ struct shoppingStuff: View {
                     
                 }
             }
-                
-                CustomTabView(selected: $selected)
-            }
+            
+            CustomTabView(selected: $selected)
         }
     }
-    
-    struct shoppingStuff_Previews: PreviewProvider {
-        static var previews: some View {
-            shoppingStuff()
-        }
+}
+
+struct shoppingStuff_Previews: PreviewProvider {
+    static var previews: some View {
+        shoppingStuff()
     }
-    
-    struct CustomTabView: View {
-        @Binding var selected: String
-        var body: some View {
-            HStack {
-                ForEach (tabs, id: \.self) { i in
-                    VStack(spacing: 10) {
-                        
-                        Capsule()
-                            .fill(Color.clear)
-                            .frame(height: 5)
-                            .overlay(
-                                Capsule().fill(self.selected == i ? Color("color") :
-                                                Color.purple).frame(width: 55, height: 5))
-                        
-                        Button(action: {
-                            self.selected = i
-                        }) {
-                            VStack {
-                                Image(i).renderingMode(.original)
-                                Text(i).foregroundColor(.black)
-                            }
+}
+
+struct CustomTabView: View {
+    @Binding var selected: String
+    var body: some View {
+        HStack {
+            ForEach (tabs, id: \.self) { i in
+                VStack(spacing: 10) {
+                    
+                    Capsule()
+                        .fill(Color.clear)
+                        .frame(height: 5)
+                        .overlay(
+                            Capsule().fill(self.selected == i ? Color(.purple) :
+                                            Color.clear).frame(width: 55, height: 5))
+                    
+                    Button(action: {
+                        self.selected = i
+                    }) {
+                        VStack {
+                            Image(i).renderingMode(.original)
+                            Text(i).foregroundColor(.black)
                         }
                     }
                 }
-            }.padding(.horizontal)
-        }
+            }
+        }.padding(.horizontal)
     }
-    
+}
+
 struct Home: View {
     @State var text = ""
     var body: some View {
         
         VStack(spacing: 15) {
+            
             HStack(spacing: 12) {
                 
                 
                 
                 Text("\(Image(systemName: "person.circle"))\t Hello abdulQadeer")
                 Spacer()
+                
+                Button(action: {
+                    
+                }) {
+                    Image(systemName: "gearshape")
+                }.foregroundColor(.black)
             }
-        }
-        
-        HStack {
-            Image(systemName: "magnifyingglass").font(.body)
-            TextField("Search the store", text: $text)
-        }
-        .padding(10)
-            .background((Color.black.opacity(0.15))
+            
+            HStack(spacing: 15)  {
+                HStack {
+                    Image(systemName: "magnifyingglass").font(.body)
+                    TextField("Search the store", text: $text)
+                }
+                .padding(10)
+                .background((Color.black.opacity(0.15))
                 .frame(maxWidth: .infinity)
-            .cornerRadius(20))
+                .cornerRadius(20))
+                
+                Button(action: {
+                   
+                }) {
+                    Image(systemName: "mic")
+                        .foregroundColor(.black)
+                    
+                    
+                }
+            }
+            
+            Spacer()
+           
+            
+        }.padding(.horizontal)
     }
 }
-    
-    var tabs = ["Home", "Wishlist", "Cart"]
+
+
+
+
+var tabs = ["Home", "Wishlist", "Cart"]
