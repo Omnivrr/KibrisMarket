@@ -1,7 +1,3 @@
-# KibrisMarket
-A grocery store
-Sure, here's an updated version with that correction:
-
 # kibrismarket iOS App
 
 kibrismarket is an iOS app that allows users to order groceries online and have them delivered to their doorstep. The app is built using SwiftUI, and requires iOS 14.0 or later to run.
