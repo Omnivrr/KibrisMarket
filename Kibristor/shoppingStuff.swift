@@ -10,28 +10,32 @@ import SwiftUI
 struct shoppingStuff: View {
     @State var selected = "Home"
     var body: some View {
+        // Create a vertical stack of views
         VStack {
+            
+            // Show the Home view if the selected tab is "Home"
             if self.selected == "Home" {
                 Home()
                 
-            }
-            else if self.selected == "Wishlist" {
+            // Show the Wishlist view if the selected tab is "Wishlist"
+            } else if self.selected == "Wishlist" {
                 GeometryReader{ _ in
                     Text("Wishlist")
                 }
-            }
-            else {
+                
+            // Show the Cart view if the selected tab is "Cart"
+            } else {
                 GeometryReader{ _ in
                     Text("Cart")
                     
                 }
             }
             
+            // Add a custom tab bar at the bottom of the screen
             CustomTabView(selected: $selected)
         }
     }
 }
-
 struct shoppingStuff_Previews: PreviewProvider {
     static var previews: some View {
         shoppingStuff()
